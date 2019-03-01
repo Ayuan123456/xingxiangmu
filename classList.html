@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- classList: h5新增的API,可以获取一个元素的所有类名,可以很便捷的添加一个类,删除一个类 -->
+    <!-- 伪数组,获取所有的类,类就是数组中的一个元素,通过下标去 -->
+    <!-- 方法 
+        add:添加一个类
+        remove:删除一个类
+        toggle:切换一个类
+        replace:替换一个类 参数1:被替换的类,参数2,要替换新的类
+        contains:判断元素中有没有这个类
+    
+    -->
+    
+</head>
+<body>
+    <div class="box red" ></div>
+    <input type="button" value="获取类" id="btn1">
+    <script>
+        var box=document.getElementById('btn1');
+        box.onclick= function(){
+            //获取类
+           console.log( box.classList[0]);
+            //添加类
+            box.classList.add('boder')
+            //删除类
+            box.classList.remove('boder')
+            //替换类
+            box.classList.replace('haha','boder')
+            //一次性添加好几个类
+            box.classList.add('red',"gole",'haha')
+            //或者分别写
+           //判断类
+            box.classList.contains("哈哈")
+        }
+    </script>
+</body>
+</html>
